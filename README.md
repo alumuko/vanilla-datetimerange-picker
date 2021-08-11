@@ -45,9 +45,8 @@ new DateRangePicker(bindElementId, options, callback);
 | callback | function(momemt, moment) | change datetime callback, 2 parameters: start and end datetime |
 
 ## Options
-
 <details>
-<summary>Almost same as [Dan Grossman's bootstrap-daterangepicker.](http://www.daterangepicker.com/) (version 3.1)</summary>
+<summary>Almost same as Dan Grossman's bootstrap-daterangepicker Version 3.1</summary>
 
 | name | type | means |
 ----|----|---- 
@@ -79,9 +78,12 @@ new DateRangePicker(bindElementId, options, callback);
 | linkedCalendars | **true**/false | When enabled, the two calendars displayed will always be for two sequential months (i.e. January and February), and both will be advanced when clicking the left or right arrows above the calendars. When disabled, the two calendars can be individually advanced and display any month/year.|
 | isInvalidDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return true or false to indicate whether that date should be available for selection or not.|
 | isCustomDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return a string or array of CSS class names to apply to that date's calendar cell.|
-| autoUpdateInput | **true**/false Indicates whether the date range picker should automatically update the value of the <input> element it's attached to at initialization and when the selected dates change.|
+| autoUpdateInput | **true**/false Indicates whether the date range picker should automatically update the value of the &lt;input&gt; element it's attached to at initialization and when the selected dates change.|
 | parentEl | string | jQuery selector of the parent element that the date range picker will be added to, if not provided this will be 'body'|
+> **strong text value** means default value.
+
 </details>
+
 
 ## Methods
 <details>
