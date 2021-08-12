@@ -1,5 +1,5 @@
 /**
-* @version: 0.0.1
+* @version: 0.1.1
 * @author: Alumuko https://github.com/alumuko/alumuko
 * @copyright: Copyright (c) 2021 Alumuko. All rights reserved.
 * @license: Licensed under the MIT license. See http://www.opensource.org/licenses/mit-license.php

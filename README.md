@@ -10,7 +10,7 @@ I just changed the code a bit to not need jquery.
 ## Requirements
 -  [Moment.js](https://momentjs.com/)
 ### IE11
-If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.io/v3/polyfill.js) to use CustomEvent, Object.assign, Element.prototype.closest and Element.prototype.matches features.
+If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.io/v3/polyfill.js?ua=ie/11) to use CustomEvent, Object.assign, Element.prototype.closest and Element.prototype.matches features.
 
 
 ## Quick start using CDN.
@@ -23,7 +23,7 @@ If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.
 ```
 2. Put "INPUT" element into "BODY", and bind DateRangePicker instance.
 ```
-<input type="text" id="datetimerange-input1" size="24" style="text-align:center"></input>
+<input type="text" id="datetimerange-input1" size="24" style="text-align:center">
 
 <script>
     window.addEventListener("load", function (event) {
@@ -129,7 +129,7 @@ new DateRangePicker(bindElementId, options, callback);
 ![Data Time Range Picker](/examples/vanilla-datatime-range-picker.png)
 
 ```
-<input type="text" id="datetimerange-input1" size="40" style="text-align:center"></input>
+<input type="text" id="datetimerange-input1" size="40" style="text-align:center">
 
 <script>
     window.addEventListener("load", function (event) {
