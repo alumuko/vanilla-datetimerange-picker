@@ -35,12 +35,12 @@ If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.
 See [simple example page](/examples/simple-example.html)</a>.
 ## Usage
 ```
-new DateRangePicker(bindElementId, options, callback);
+new DateRangePicker(bindElement, options, callback);
 ```
 
 | parameter | type | means |
 ----|----|---- 
-| bindElementId | string | bind element id |
+| bindElement | string or object | bind element id or bind HTMLElement object |
 | options | object | option set (see Options) |
 | callback | function(momemt, moment) | change datetime callback, 2 parameters: start and end datetime |
 

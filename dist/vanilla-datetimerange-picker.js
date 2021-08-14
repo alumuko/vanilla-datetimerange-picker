@@ -16,7 +16,10 @@ var DateRangePicker;
 
         //default settings for options
         this.parentEl = document.body;
-        this.element = document.getElementById(element);
+        if (typeof element === 'string')
+            this.element = document.getElementById(element);
+        else
+            this.element = element;
         this.startDate = moment().startOf('day');
         this.endDate = moment().endOf('day');
         this.minDate = false;
