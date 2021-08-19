@@ -8,7 +8,7 @@ I just changed the code a bit to not need jquery.
 
 
 ## Requirements
--  [Moment.js](https://momentjs.com/)
+-  [Moment.js](https://momentjs.com/) (version 2.29.1 is recommended.)
 ### IE11
 If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.io/v3/polyfill.js?ua=ie/11) to use CustomEvent, Object.assign, Element.prototype.closest and Element.prototype.matches features.
 
@@ -154,6 +154,21 @@ new DateRangePicker(bindElement, options, callback);
 </script>
 ```
 See [datetime example page](/examples/datetime-example.html)</a>.
+
+## Extra
+## A Dark Version CSS
+![Dark Data Time Range Picker](/examples/vanilla-datatime-range-picker-dark.png)
+
+change
+```
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.css">
+```
+to
+```
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/extra/vanilla-datetimerange-picker-dark.css">
+```
+
+See [datetime dark example page](/examples/datetime-example-dark.html)</a>.
 
 ## Special Thanks
  Special thanks to [Dan Grossman](http://www.dangrossman.info/)
