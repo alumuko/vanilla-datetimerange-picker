@@ -32,7 +32,7 @@ If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.
 </script>
 ```
 
-See [simple example page](/examples/simple-example.html)</a>.
+See [simple example page](/examples/datetime-example-simple)</a>.
 ## Usage
 ```
 new DateRangePicker(bindElement, options, callback);
@@ -54,8 +54,8 @@ new DateRangePicker(bindElement, options, callback);
 | endDate | Date or string | The end date of the initially selected date range.|
 | minDate | Date or string | The earliest date a user may select.|
 | maxDate | Date or string | The latest date a user may select. |
-| maxSapn | object | The maximum span between the selected start and end dates. Check off **maxSpan** in the configuration generator for an example of how to use this. You can provide any object the moment library would let you add to a date. |
-|showDropdowns | true/false | Show year and month select boxes above calendars to jump to a specific month and year. |
+| maxSpan | object | The maximum span between the selected start and end dates. You can provide any object the moment library would let you add to a date. |
+|showDropdowns | true/**false** | Show year and month select boxes above calendars to jump to a specific month and year. |
  minYear | number | The minimum year shown in the dropdowns when **showDropdowns** is set to true.|
 | maxYear | number | The maximum year shown in the dropdowns when **showDropdowns** is set to true.|
 | showWeekNumbers | true/**false** | Show localized week numbers at the start of each week on the calendars.|
@@ -79,7 +79,7 @@ new DateRangePicker(bindElement, options, callback);
 | isInvalidDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return true or false to indicate whether that date should be available for selection or not.|
 | isCustomDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return a string or array of CSS class names to apply to that date's calendar cell.|
 | autoUpdateInput | **true**/false Indicates whether the date range picker should automatically update the value of the &lt;input&gt; element it's attached to at initialization and when the selected dates change.|
-| parentEl | string | jQuery selector of the parent element that the date range picker will be added to, if not provided this will be 'body'|
+| parentEl | string | the parent element that the date range picker will be added to, if not provided this will be 'body'|
 > **strong text value** means default value.
 
 </details>
