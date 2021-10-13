@@ -72,14 +72,22 @@ new DateRangePicker(bindElement, options, callback);
 | buttonClasses | string | CSS class names that will be added to both the apply and cancel buttons.|
 | applyButtonClasses | string | CSS class names that will be added only to the apply button.|
 | cancelButtonClasses | string | CSS class names that will be added only to the cancel button. |
-| locale | object | Allows you to provide localized strings for buttons and labels, customize the date format, and change the first day of week for the calendars. See "locale option object".|
 | singleDatePicker | true/**false** | Show only a single calendar to choose one date, instead of a range picker with two calendars. The start and end dates provided to your callback will be the same single date chosen.|
-| autoApply | true/**false** Hide the apply and cancel buttons, and automatically apply a new date range as soon as two dates are clicked.|
+| autoApply | true/**false** | Hide the apply and cancel buttons, and automatically apply a new date range as soon as two dates are clicked.|
 | linkedCalendars | **true**/false | When enabled, the two calendars displayed will always be for two sequential months (i.e. January and February), and both will be advanced when clicking the left or right arrows above the calendars. When disabled, the two calendars can be individually advanced and display any month/year.|
 | isInvalidDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return true or false to indicate whether that date should be available for selection or not.|
 | isCustomDate | function(moment) | A function that is passed each date in the two calendars before they are displayed, and may return a string or array of CSS class names to apply to that date's calendar cell.|
-| autoUpdateInput | **true**/false Indicates whether the date range picker should automatically update the value of the &lt;input&gt; element it's attached to at initialization and when the selected dates change.|
+| autoUpdateInput | **true**/false | Indicates whether the date range picker should automatically update the value of the &lt;input&gt; element it's attached to at initialization and when the selected dates change.|
 | parentEl | string | the parent element that the date range picker will be added to, if not provided this will be 'body'|
+| locale | object ||
+| locale.format | string | date time text locale format like "YYYY年MM月DD日 HH時mm分ss秒".|
+| locale.separator | string | separator between 2 date times. default separator is "**-**"|
+| locale.applyLabel | string | label text of the apply button. default is "**Apply**"|
+| locale.cancelLabel | string | label text of the cancel button. default is "**Cancel**"|
+| locale.weekLabel | string | label text of week number column like "**W**"|
+| locale.daysOfWeek | array of 7 strings | 7 label texts of week column like **['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']** |
+| locale.monthNames | array of 12 strings | 12 label texts of month nameweek column. like **['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']** |
+| locale.firstDay | number | 0 = from Sunday, 1 = from Monday, ..., 6 = from Saturday |
 > **strong text value** means default value.
 
 </details>
