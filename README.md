@@ -32,13 +32,13 @@ If you want to use on Internet Explorer 11, include [Polyfill](https://polyfill.
 </script>
 ```
 
-See [simple example page](/examples/datetime-example-simple)</a>.
+See [simple example page](examples/datetime-example-simple.html).
 ## Usage
 ```
 new DateRangePicker(bindElement, options, callback);
 ```
 
-| parameter | type | means |
+| parameter | type | description |
 ----|----|---- 
 | bindElement | string or object | bind element id or bind HTMLElement object |
 | options | object | option set (see Options) |
@@ -48,7 +48,7 @@ new DateRangePicker(bindElement, options, callback);
 <details>
 <summary>Almost same as Dan Grossman's bootstrap-daterangepicker Version 3.1</summary>
 
-| name | type | means |
+| name | type | description |
 ----|----|---- 
 | startDate | Date or string | The beginning date of the initially selected date range. If you provide a string, it must match the date format string set in your locale setting.|
 | endDate | Date or string | The end date of the initially selected date range.|
@@ -97,7 +97,7 @@ new DateRangePicker(bindElement, options, callback);
 <details>
 <summary> You can programmatically update the startDate and endDate in the picker using the setStartDate and setEndDate methods. You can access the Date Range Picker object and its functions and properties through data properties of the element you attached it to.</summary>
 
-| name | type | means |
+| name | type | description |
 ----|----|---- 
 | setStartDate | Date or string | Sets the date range picker's currently selected start date to the provided date |
 | setEndDate | Date or string | Sets the date range picker's currently selected end date to the provided date |
@@ -114,7 +114,7 @@ new DateRangePicker(bindElement, options, callback);
 <details>
 <summary> Several events are triggered on the element you attach the picker to, which you can listen for.</summary>
 
-| name |  means |
+| name |  description |
 ----|---- 
 | show.daterangepicker | Triggered when the picker is shown |
 | hide.daterangepicker | Triggered when the picker is hidden |
@@ -134,7 +134,7 @@ new DateRangePicker(bindElement, options, callback);
 
 ## Examples
 ### Data Time Range Picker with a Callback.
-![Data Time Range Picker](/examples/vanilla-datatime-range-picker.png)
+![Data Time Range Picker](examples/vanilla-datatime-range-picker.png)
 
 ```
 <input type="text" id="datetimerange-input1" size="40" style="text-align:center">
@@ -161,7 +161,7 @@ new DateRangePicker(bindElement, options, callback);
     });
 </script>
 ```
-See [datetime example page](/examples/datetime-example.html)</a>.
+See [datetime example page](/examples/datetime-example.html)
 
 ## Extra
 ## A Dark Version CSS
