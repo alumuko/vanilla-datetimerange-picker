@@ -1593,7 +1593,7 @@ var DateRangePicker;
             }
 
             if (this.singleDatePicker || start === null || end === null) {
-                start = moment(this.element.val(), this.locale.format);
+                start = moment(this.element.value, this.locale.format);
                 end = start;
             }
 
