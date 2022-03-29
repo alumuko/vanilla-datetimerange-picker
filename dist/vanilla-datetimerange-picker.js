@@ -1412,14 +1412,14 @@ var DateRangePicker;
                 this.setEndDate(date.clone());
                 if (this.autoApply) {
                   this.calculateChosenLabel();
-                  this.clickApply();
+                  this.clickApply(e);
                 }
             }
 
             if (this.singleDatePicker) {
                 this.setEndDate(this.startDate);
                 if (!this.timePicker && this.autoApply)
-                    this.clickApply();
+                    this.clickApply(e);
             }
 
             this.updateView();
