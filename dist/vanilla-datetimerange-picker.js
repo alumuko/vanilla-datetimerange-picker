@@ -1096,8 +1096,8 @@ var DateRangePicker;
             if (!(this.parentEl.tagName === 'BODY')) {
                 let parentElOffset = jq.offset(this.parentEl);
                 parentOffset = {
-                    top: parentElOffset.top - this.parentEl.scrollTop(),
-                    left: parentElOffset.left - this.parentEl.scrollLeft()
+                    top: parentElOffset.top - this.parentEl.scrollTop,
+                    left: parentElOffset.left - this.parentEl.scrollLeft
                 };
                 parentRightEdge = this.parentEl.clientWidth + parentElOffset.left;
             }
