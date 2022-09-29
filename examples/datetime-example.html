@@ -8,11 +8,19 @@
     </head>
     <body>
         <div><input type="text" id="datetimerange-input1" size="40" style="text-align:center"></div>
+        <div><input type="button" value="change range" onclick='rangeChange();'></div>
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script>
         <script>
+            var drp;
+            var rangeChange = function(){
+                drp.updateRanges({
+                    'Last 3 Days': [moment().subtract(2, 'days').startOf('day'), moment().endOf('day')],
+                    'This Year': [moment().startOf('year').startOf('day'), moment().endOf('year').endOf('day')],
+                });
+            };
             window.addEventListener("load", function (event) {
-                let drp = new DateRangePicker('datetimerange-input1',
+                drp = new DateRangePicker('datetimerange-input1',
                     {
                         //startDate: '2000-01-01',
                         //endDate: '2000-01-03',
@@ -32,7 +40,7 @@
                         alwaysShowCalendars: true,
                         //opens: 'center',
                         //drops: 'up',
-                        //singleDatePicker: true,
+                        singleDatePicker: true,
                         //autoApply: true,
                         //linkedCalendars: false,
                         //isInvalidDate: function(m){

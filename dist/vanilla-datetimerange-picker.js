@@ -1710,8 +1710,68 @@ var DateRangePicker;
             }
            delete this.container;
            delete this.element.dataset;
-        }
+        },
 
+        updateRanges: function(newRanges){
+            if (typeof newRanges === 'object') {
+                jq.off(this.container.querySelector('.ranges'), 'click', 'li', this.clickRangeProxy);
+                this.ranges = [];
+                let rangesKeys = Object.keys(newRanges);
+                for(let i = 0; i < rangesKeys.length; ++i){
+                    let range = rangesKeys[i];
+    
+                    if (typeof newRanges[range][0] === 'string')
+                        start = moment(newRanges[range][0], this.locale.format);
+                    else
+                        start = moment(newRanges[range][0]);
+    
+                    if (typeof newRanges[range][1] === 'string')
+                        end = moment(newRanges[range][1], this.locale.format);
+                    else
+                        end = moment(newRanges[range][1]);
+    
+                    // If the start or end date exceed those allowed by the minDate or maxSpan
+                    // options, shorten the range to the allowable period.
+                    if (this.minDate && start.isBefore(this.minDate))
+                        start = this.minDate.clone();
+    
+                    var maxDate = this.maxDate;
+                    if (this.maxSpan && maxDate && start.clone().add(this.maxSpan).isAfter(maxDate))
+                        maxDate = start.clone().add(this.maxSpan);
+                    if (maxDate && end.isAfter(maxDate))
+                        end = maxDate.clone();
+    
+                    // If the end of the range is before the minimum or the start of the range is
+                    // after the maximum, don't display this range option at all.
+                    if ((this.minDate && end.isBefore(this.minDate, this.timepicker ? 'minute' : 'day'))
+                      || (maxDate && start.isAfter(maxDate, this.timepicker ? 'minute' : 'day')))
+                        continue;
+    
+                    //Support unicode chars in the range names.
+                    var elem = document.createElement('textarea');
+                    elem.innerHTML = range;
+                    var rangeHtml = elem.value;
+    
+                    this.ranges[rangeHtml] = [start, end];
+                }
+    
+                var list = '<ul>';
+                for (range in this.ranges) {
+                    list += '<li data-range-key="' + range + '">' + range + '</li>';
+                }
+                if (this.showCustomRangeLabel) {
+                    list += '<li data-range-key="' + this.locale.customRangeLabel + '">' + this.locale.customRangeLabel + '</li>';
+                }
+                list += '</ul>';
+                let rangeNode = this.container.querySelector('.ranges');
+                rangeNode.removeChild(rangeNode.firstChild);
+                rangeNode.insertAdjacentHTML('afterbegin', list);
+            }
+
+            this.clickRangeProxy = function (e) { this.clickRange(e); }.bind(this);
+            jq.on(this.container.querySelector('.ranges'), 'click', 'li', this.clickRangeProxy);
+        }
+        
     };
 
     // alternate jquery function (subset)

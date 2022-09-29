@@ -164,7 +164,7 @@ new DateRangePicker(bindElement, options, callback);
 See [datetime example page](/examples/datetime-example.html)
 
 ## Extra
-## A Dark Version CSS
+### A Dark Version CSS
 ![Dark Data Time Range Picker](/examples/vanilla-datatime-range-picker-dark.png)
 
 change
@@ -177,6 +177,13 @@ to
 ```
 
 See [datetime dark example page](/examples/datetime-example-dark.html)</a>.
+
+### Dynamic DataRange Change (since 0.2.0)
+you can change dateranges dynamically.
+with extra function ```updateRanges(Object)```
+
+See [datetime example page](/examples/datetime-example.html)</a>.
+
 
 ## Special Thanks
  Special thanks to [Dan Grossman](http://www.dangrossman.info/)
