@@ -1473,7 +1473,7 @@ var DateRangePicker;
 
         clickApply: function(e) {
             this.hide();
-            e.target.dispatchEvent(new CustomEvent('apply.daterangepicker', {bubbles: true, detail: this}));
+            this.element.dispatchEvent(new CustomEvent('apply.daterangepicker', {bubbles: true, detail: this}));
         },
 
         clickCancel: function(e) {
